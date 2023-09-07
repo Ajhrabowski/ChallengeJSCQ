@@ -1,0 +1,85 @@
+const startButton = document.getElementById('start-btn')
+
+startButton.addEventListener('click',startGame)
+
+function startGame(){
+    console.log('Started')
+}
+
+
+/*const questions = 
+
+    {
+        question: "What are objects in JavaScript?",
+        answers: [
+            {Text:"Signs, lights, and speed bumps, correct: false"},
+            {Text:"Arrays, events, and lists ", correct: false},
+            {Text:"Strings, numbers, booleans, and functions", correct: true},
+            {Text:"Latte, mochas, and crenes", correct: false},
+    
+        ]   
+    },
+    {
+        question: "What is an array in JavaScript?",
+        answers: [
+            {Text:"An ordered list of elements containing any data type", correct: true},
+            {Text:"Obsticals", correct: false},
+            {Text:"A strict code", correct: true},
+            {Text:"An array helps you build an object", correct: false},
+    
+        ]
+    },
+    {
+        question: "What is a function in JavaScript?",
+        answers: [
+            {Text:"A song buy E-40", correct: false},
+            {Text:"Code and its ability to make things run ", correct: false},
+            {Text:"An action or occurrence that happens as a result of user interaction", correct: false},
+            {Text:"A reusable piece of code that can be used to perform a specific task", correct: true},
+    
+        ]
+    },
+    {
+        question: "A key feature in JavaScript is?",
+        answers: [
+            {Text:"Object-orientedt", correct: false},
+            {Text:"Cross-platform compatibilitys", correct: false},
+            {Text:"Interactivity", correct: false},
+            {Text:"All of the above", correct: false},
+    
+        ]
+    }
+
+
+];
+
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn"); 
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "next"
+    showQuestion();
+}
+
+function showQuestion(){
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestion + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.
+    question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button);
+    });
+}
+
+startQuiz();/*
+

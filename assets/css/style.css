@@ -3,3 +3,92 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: rgb(243, 243, 243);
+}
+.container{
+     background: rgb(238, 234, 238);
+     width: 90%;
+     max-width:  600px;
+     margin: 100px auto 0;
+     border-radius: 10px;
+     padding-left: 30px;
+
+    }
+
+    .container h1{
+        font-size: 25px;
+        color: rgb(14, 13, 13);
+        font-weight: 600;
+      /*border-bottom: 1px solid black;*/
+        padding-bottom: 30px;
+    }
+
+    h1 {
+
+        margin-left: 25%;
+        
+    }
+
+    
+
+    .quiz{
+        padding:  20px 0;
+    }
+
+    .quiz h2{
+        font-size: 18px;
+        font-weight: 600; 
+
+    }
+
+
+.hide {
+   /* display: none;  // this completely REMOVES THE ELMENT  */
+  visibility: hidden;  /* removes the VISIABLE PORTION -ELEMTN IS STILL IN THE DOM TREE */
+}
+
+    .btn{
+
+       
+font-weight: 500;
+        width: 100%;
+        border: 0;
+        padding: 10px;
+        margin: 20px auto 0;
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+
+    .btn:hover{
+        background: purple;
+        color: white;
+    }
+
+
+#nextbutton{
+    background: purple;
+    color: black;
+    font-weight: 500;
+    width: 150%;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    
+}
+#nextbutton:hover{
+    background: purple;
+    color: white;
+    }
+
+   
+
+
+    
+
+
+
+

@@ -1,12 +1,33 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/myscripts.js"></script>
-    <title>ChallengeJSCQ</title>
-</head>
-<body>
     
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        
+        
+        <title>ChallengeJSCQ</title>
+    </head>
+    <body>
+        
+        <div class="container" id="highscore">
+            <h1>Coding Quiz Challenge</h1>
+            
+            <div class="quiz">
+                <div id ="question-container" class="hide">
+                    <div id="question">Question</div>
+                    <div id="answer-buttons">
+                        <button data-answer="0" id="ans1" class="btn">Answer 1</button>
+                        <button data-answer="1" id="ans2" class="btn">Answer 2</button>
+                        <button data-answer="2" id="ans3" class="btn">Answer 3</button>
+                        <button data-answer="3" id="ans4" class="btn">Answer 4</button>
+                    </div>
+                    <button id="next-btn" class="next-btn btn hide">Next</button>
+                </div>
+                /*<button id="start-btn" class="start-btn btn">Start</button>*
+            </div>
+        </div>
+        
+        <script src="./assets/js/script.js"></script> 
+    </body>
 </html>
