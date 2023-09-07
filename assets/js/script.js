@@ -8,6 +8,10 @@ const answerButtonThree = document.getElementById('ans3');
 const answerButtonFour = document.getElementById('ans4');
 const nextButton = document.getElementById('next-btn');
 
+
+
+
+
  
 
 
@@ -122,6 +126,16 @@ function showQuestion(question) {
     
 
 }
+
+function timeTick() {
+    timeLeft--;
+    timerEl.textContent = "Time: " + timeLeft;
+    if (timeLeft <= 0) {
+        saveScore();
+    }
+}
+
+
 
 
 

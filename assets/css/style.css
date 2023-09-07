@@ -6,6 +6,16 @@
 body{
     background-color: rgb(243, 243, 243);
 }
+
+p {
+
+    display: inline-flex;
+    padding-top: 5%;
+    font-size: 40px;
+    margin-left: 80%;
+  
+
+}
 .container{
      background: rgb(238, 234, 238);
      width: 90%;
@@ -27,6 +37,9 @@ body{
     h1 {
 
         margin-left: 25%;
+        padding-top: 5%;
+    
+        
         
     }
 
