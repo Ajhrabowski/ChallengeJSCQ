@@ -8,14 +8,13 @@ const answerButtonThree = document.getElementById('ans3');
 const answerButtonFour = document.getElementById('ans4');
 const nextButton = document.getElementById('next-btn');
 
-
-
+const timerEl=  document.getElementById('countdown');
 
 
  
 
 
-console.log("Element: ", startButton)
+console.log("Element:", startButton)
 
 startButton.addEventListener('click', startQuiz);
 
@@ -48,7 +47,7 @@ const question = [
             {Text:"Code and its ability to make things run ", correct: false},
             {Text:"An action or occurrence that happens as a result of user interaction", correct: false},
             {Text:"A reusable piece of code that can be used to perform a specific task", correct: true},
-    
+            
         ]
     },
     {
@@ -58,22 +57,22 @@ const question = [
             {Text:"Cross-platform compatibilitys", correct: false},
             {Text:"Interactivity", correct: false},
             {Text:"All of the above", correct: true},
-    
+            
         ]
     }
 ]
 
 
 let currentQuestionIndex = 0;
-let score = 0;
+var score = 0;
 
 function startQuiz(){
     console.log('Started')
+    var timeOut= setInterval(timeTick,1000);
     startButton.classList.add('hide')
     questionContainerElement.classList.remove('hide')
-    nextButton.classList.remove('hide')
     setNextQuestion()
-
+    
 }
 
 
@@ -86,27 +85,28 @@ function setNextQuestion(){
     answerButtonTwo.textContent = question[currentQuestionIndex].answers[1].Text
     answerButtonThree.textContent = question[currentQuestionIndex].answers[2].Text
     answerButtonFour.textContent = question[currentQuestionIndex].answers[3].Text
-       
-   
+    
+    
 }
 
- // We need to CAPTURE the USER Choice
- answerButtonsElement.addEventListener('click', function(event) {
+// We need to CAPTURE the USER Choice
+answerButtonsElement.addEventListener('click', function(event) {
     console.log("Event: ", event);
-
+    
     event.stopPropagation();
     console.log("Target: ", event.target);
     console.log("Content: ", event.target.textContent);
-
+    
     // Run some validation --> Check is the USER choice the CORRECT answer(?)
     // IF YES --> add to score , AND SHOW NEXT QUESTION
     if (question[currentQuestionIndex].answers[event.target.dataset.answer].correct) {
-
-    
-    
+        
+        
+        
         //after you get the question right add points to time and seconds to the time increment the current question index.
         alert("correctAnswer");
         currentQuestionIndex++;
+        score++
         setNextQuestion();
     }
     else {
@@ -129,11 +129,20 @@ function showQuestion(question) {
 
 function timeTick() {
     timeLeft--;
-    timerEl.textContent = "Time: " + timeLeft;
+    timerEl.textContent = "Time" + timeLeft;
     if (timeLeft <= 0) {
+        clearInterval(timeOut);
         saveScore();
     }
 }
+
+var timeLeft= 60
+
+
+
+
+
+
 
 
 

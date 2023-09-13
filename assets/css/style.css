@@ -16,6 +16,17 @@ p {
   
 
 }
+
+.highscore {
+    
+    display: inline-flex;
+    padding-top: 5%;
+    font-size: 40px;
+    margin-right: 100%;
+  
+}
+
+
 .container{
      background: rgb(238, 234, 238);
      width: 90%;
