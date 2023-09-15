@@ -8,6 +8,9 @@ const answerButtonThree = document.getElementById('ans3');
 const answerButtonFour = document.getElementById('ans4');
 const nextButton = document.getElementById('next-btn');
 
+var high = document.querySelector(".highscore");
+var highScores = parseInt(high.textContent);
+getHighs();
 const timerEl=  document.getElementById('countdown');
 
 
@@ -65,10 +68,10 @@ const question = [
 
 let currentQuestionIndex = 0;
 var score = 0;
-
+var timeOut;
 function startQuiz(){
     console.log('Started')
-    var timeOut= setInterval(timeTick,1000);
+    timeOut= setInterval(timeTick,1000);
     startButton.classList.add('hide')
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
@@ -106,8 +109,15 @@ answerButtonsElement.addEventListener('click', function(event) {
         //after you get the question right add points to time and seconds to the time increment the current question index.
         alert("correctAnswer");
         currentQuestionIndex++;
-        score++
-        setNextQuestion();
+        score++;
+        if (currentQuestionIndex < question.length){
+            setNextQuestion();
+        } else {
+            clearInterval(timeOut);
+            setHighs();
+
+        }
+       
     }
     else {
         alert("wrongAnswer")
@@ -132,11 +142,34 @@ function timeTick() {
     timerEl.textContent = "Time" + timeLeft;
     if (timeLeft <= 0) {
         clearInterval(timeOut);
-        saveScore();
+        setHighs();
     }
 }
 
-var timeLeft= 60
+var timeLeft= 30
+
+
+function setHighs() {
+    if (score > highScores) {
+        highScores = score;
+    high.textContent = highScores;
+    localStorage.setItem("highScore", highScores);
+    }
+
+  }
+
+ 
+function getHighs() {
+    
+    var storedHighs = localStorage.getItem("highScores");
+
+    if (storedHighs === null) {
+      highScores = storedHighs
+
+    }  
+   
+    high.textContent = highScores;
+  }
 
 
 

@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
 }
+
 body{
     background-color: rgb(243, 243, 243);
 }
@@ -10,10 +11,9 @@ body{
 p {
 
     display: inline-flex;
-    padding-top: 5%;
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 80%;
-  
+ 
 
 }
 
@@ -21,10 +21,21 @@ p {
     
     display: inline-flex;
     padding-top: 5%;
-    font-size: 40px;
-    margin-right: 100%;
-  
+    font-size: 30px;
+    
 }
+
+.lowcore {
+    
+    display: inline-flex;
+    padding-top: 5%;
+    font-size: 30px;
+    
+}
+ 
+ 
+   
+  
 
 
 .container{
