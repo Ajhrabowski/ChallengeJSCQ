@@ -8,11 +8,12 @@ body{
     background-color: rgb(243, 243, 243);
 }
 
-p {
+p{
 
     display: inline-flex;
     font-size: 30px;
     margin-left: 80%;
+
  
 
 }
@@ -24,20 +25,7 @@ p {
     font-size: 30px;
     
 }
-
-.lowcore {
-    
-    display: inline-flex;
-    padding-top: 5%;
-    font-size: 30px;
-    
-}
  
- 
-   
-  
-
-
 .container{
      background: rgb(238, 234, 238);
      width: 90%;

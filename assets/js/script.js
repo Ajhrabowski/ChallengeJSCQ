@@ -106,7 +106,7 @@ answerButtonsElement.addEventListener('click', function(event) {
         
         
         
-        //after you get the question right add points to time and seconds to the time increment the current question index.
+    
         alert("correctAnswer");
         currentQuestionIndex++;
         score++;
@@ -122,7 +122,7 @@ answerButtonsElement.addEventListener('click', function(event) {
     else {
         alert("wrongAnswer")
     }
-    // IF NO --> subtract time, AND SHOW NEXT QUESTION
+    
 });
 
 function showQuestion(question) {
